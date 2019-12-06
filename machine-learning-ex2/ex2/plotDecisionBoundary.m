@@ -37,10 +37,14 @@ else
             z(i,j) = mapFeature(u(i), v(j))*theta;
         end
     end
+    %hold off
+    %surf(z);
+    %pause
     z = z'; % important to transpose z before calling contour
 
     % Plot z = 0
     % Notice you need to specify the range [0, 0]
+    % https://zhidao.baidu.com/question/1639390440173619500.html
     contour(u, v, z, [0, 0], 'LineWidth', 2)
 end
 hold off

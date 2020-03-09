@@ -15,6 +15,8 @@ sim = 0;
 %               sigma
 %
 %
+x1_min_x2_2 = sum((x1-x2).^2);
+sim = exp( -x1_min_x2_2 / (2*sigma^2) );
 
 
 
